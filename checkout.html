@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأخوة | إتمام الشراء</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="site-header is-scrolled" data-header>
+        <a class="brand" href="index.html"><span>ATELIER</span><strong>الأخوة</strong></a>
+        <nav class="desktop-nav"><a href="collections.html">المجموعات</a><a href="women.html">النساء</a><a href="men.html">الرجال</a><a href="children.html">الأطفال</a><a href="login.html">الأتيليه</a></nav>
+        <div class="header-actions"><a class="icon-button" href="collections.html#shop" aria-label="البحث"><svg>
+                    <use href="image/icons.svg#icon-search"></use>
+                </svg></a><a class="icon-button" href="login.html" aria-label="الحساب"><svg>
+                    <use href="image/icons.svg#icon-user"></use>
+                </svg></a>
+            <a class="icon-button bag-button" href="checkout.html" aria-label="السلة"><svg>
+                    <use href="image/icons.svg#icon-bag"></use>
+                </svg><span data-cart-count>0</span></a><button class="icon-button mobile-only" type="button" data-menu-open><svg>
+                    <use href="image/icons.svg#icon-menu"></use>
+                </svg></button>
+        </div>
+    </header>
+    <aside class="mobile-menu" data-mobile-menu>
+        <div class="drawer-head"><span class="mini-label">القائمة</span><button class="icon-button" type="button" data-menu-close><svg>
+                    <use href="image/icons.svg#icon-close"></use>
+                </svg></button></div><a href="index.html">الرئيسية</a><a href="collections.html">المجموعات</a>
+        <a href="product.html">المنتج</a>
+    </aside>
+
+    <main class="checkout-page content-wrap">
+        <div class="section-heading reveal"><span class="mini-label">Secure Checkout</span>
+            <h1>إتمام الشراء</h1>
+            <p>خطوة واحدة واضحة للدفع والشحن، مع ملخص طلب ديناميكي من السلة.</p>
+        </div>
+        <div class="checkout-grid">
+            <aside class="order-panel reveal">
+                <h2>ملخص الطلب</h2>
+                <div class="checkout-items" data-checkout-items></div>
+                <div class="cart-summary">
+                    <div><span>المجموع الفرعي</span><strong data-subtotal>0 ر.س</strong></div>
+                    <div><span>الشحن السريع</span><strong>50 ر.س</strong></div>
+                    <div class="total-line"><span>الإجمالي</span><strong data-total>0 ر.س</strong></div>
+                </div>
+            </aside>
+
+            <form class="checkout-fields reveal" data-checkout-form>
+                <h2>بيانات الشحن</h2>
+                <input type="text" placeholder="الاسم الكامل" required>
+                <input type="email" placeholder="البريد الإلكتروني" required>
+                <input type="text" placeholder="رقم الهاتف" required>
+                <input type="text" placeholder="عنوان الشحن" required>
+                <h2>طريقة الدفع</h2>
+                <div class="payment-toggle"><button class="active" type="button">بطاقة ائتمان</button><button type="button">Apple Pay</button></div>
+                <input type="text" placeholder="رقم البطاقة" required>
+                <div class="field-pair"><input type="text" placeholder="MM/YY" required><input type="text" placeholder="CVV" required></div>
+                <button class="button primary" type="submit">تأكيد الطلب</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="site-footer" aria-label="تذييل الموقع">
+        <div class="footer-top">
+            <div class="footer-section footer-brand">
+                <a class="brand" href="index.html"><span>ATELIER</span><strong>الأخوة</strong></a>
+                <p>تجربة الأناقة العربية بتلاقيح عالمية، الإبداع والحرفبة في كل قطعة.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Instagram" class="social-link">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter" class="social-link">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#" aria-label="WhatsApp" class="social-link">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="#" aria-label="Email" class="social-link">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section footer-links">
+                <h3>اكتشف المجموعات</h3>
+                <nav>
+                    <a href="women.html">فاشن النساء</a>
+                    <a href="men.html">أزياء الرجال</a>
+                    <a href="children.html">ملابس الأطفال</a>
+                    <a href="collections.html">العروض الخاصة</a>
+                </nav>
+            </div>
+            <div class="footer-section footer-support">
+                <h3>خدمات ودعم</h3>
+                <nav>
+                    <a href="checkout.html">متابعة الطلب</a>
+                    <a href="login.html">حسابي</a>
+                    <a href="product.html">الأسئلة الشائعة</a>
+                    <a href="checkout.html">اتصل بنا</a>
+                </nav>
+            </div>
+            <div class="footer-section footer-newsletter">
+                <h3>ابق عالطلا طرازا</h3>
+                <p>استقبل عروض حصرية مباشرة</p>
+                <form class="footer-subscribe" data-newsletter-form>
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                    <button type="submit" class="btn-subscribe">اشترك</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <div class="footer-meta-links">
+                <a href="index.html">من نحن</a>
+                <a href="checkout.html">سياسة الخصوصية</a>
+                <a href="login.html">الاستخدام</a>
+            </div>
+            <p class="footer-copyright">© <span data-current-year></span> Atelier الأخوة. التصميم والمحتوى حصري محفوظة بالكامل.
+            </p>
+        </div>
+    </footer>
+    <div class="overlay" data-overlay></div>
+    <div class="toast" data-toast></div>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

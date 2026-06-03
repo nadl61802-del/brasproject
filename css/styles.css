@@ -784,19 +784,20 @@ svg {
 }
 
 .swatches button:nth-child(1) {
-    background: #080807;
+    background: var(--wine);
 }
 
 .swatches button:nth-child(2) {
-    background: var(--gold);
-}
-
-.swatches button:nth-child(3) {
     background: var(--emerald);
 }
 
+.swatches button:nth-child(3) {
+    background: var(--gold);
+}
+
 .swatches button:nth-child(4) {
-    background: var(--wine);
+    background: #080807;
+    border: 1px solid rgba(217, 180, 63, 0.2);
 }
 
 .swatches button.active {
@@ -1190,23 +1191,69 @@ svg {
 
 .newsletter input,
 .checkout-fields input,
-.login-panel input,
-.auth-card input {
-    width: 100%;
-    min-height: 50px;
-    padding: 0 14px;
-}
+    .checkout-fields textarea,
+    .login-panel input,
+    .auth-card input {
+        width: 100%;
+        min-height: 50px;
+        padding: 0 14px;
+    }
 
-.checkout-page {
-    padding: calc(var(--header-h) + 58px) 0 96px;
-}
+    .checkout-fields textarea {
+        min-height: 140px;
+        resize: vertical;
+        padding: 14px;
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+    }
 
-.checkout-grid {
-    direction: ltr;
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 30px;
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 30px;
+        align-items: start;
+    }
+
+    .contact-card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--panel);
+        box-shadow: var(--shadow);
+        padding: 28px;
+    }
+
+    .contact-card h3 {
+        margin-top: 0;
+        margin-bottom: 18px;
+        color: var(--gold-2);
+        font-family: "Amiri", Georgia, serif;
+        font-size: 1.95rem;
+    }
+
+    .contact-card p,
+    .contact-card a {
+        color: var(--text);
+    }
+
+    .contact-card a {
+        margin-top: 10px;
+    }
+
+    .contact-result {
+        margin-top: 18px;
+        color: var(--gold-2);
+        font-weight: 700;
+    }
+
+    @media (max-width: 920px) {
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
     align-items: start;
+        }
+    
 }
 
 .checkout-grid>* {

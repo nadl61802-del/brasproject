@@ -7,6 +7,7 @@ const products = [{
         compareAt: 10200,
         image: "image/t1.png",
         badge: "حصري",
+        color: "noir",
         description: "قطعة مسائية بتطريز ذهبي هادئ وقصة مصممة لتمنح حضورًا واضحًا من غير مبالغة.",
         sizes: ["FR 36", "FR 38", "FR 40", "FR 42"],
         gallery: ["image/t1.png", "image/t3.png", "image/t5.png", "image/t2.png"]
@@ -20,6 +21,7 @@ const products = [{
         compareAt: 10200,
         image: "image/1.png",
         badge: "حصري",
+        color: "wine",
         description: "قطعة مسائية بتطريز حرير أcher red هادئ وقصة مصممة لتمنح حضورًا واضحًا من غير مبالغة.",
         sizes: ["FR 36", "FR 38", "FR 40", "FR 42"],
         gallery: ["image/1.png", "image/a2.png", "image/a3.png", "image/a1.png"]
@@ -33,6 +35,7 @@ const products = [{
         compareAt: 13900,
         image: "image/23.png",
         badge: "جديد",
+        color: "gold",
         description: "فستان مخملي بتفاصيل ذهبية ناعمة، مناسب للحفلات الرسمية والإطلالات الهادئة الراقية.",
         sizes: ["XS", "S", "M", "FR 38"],
         gallery: ["image/23.png", "image/r2.png", "image/r3.png", "image/r1.png"]
@@ -46,6 +49,7 @@ const products = [{
         compareAt: 4700,
         image: "image/36.png",
         badge: "مختار",
+        color: "gold",
         description: "حقيبة جلدية صغيرة بحضور دافئ، تكمل فساتين السهرة والبدلات الرسمية بسهولة.",
         sizes: ["قياس موحد", "Mini", "Classic", "Evening"],
         gallery: ["image/women-bag.png", "image/product-gallery.png", "image/hero-editorial-clean.png", "image/product-dress.png"]
@@ -59,6 +63,7 @@ const products = [{
         compareAt: 5600,
         image: "image/w1.png",
         badge: "مختار",
+        color: "noir",
         description: "ساعة فرونتي الكلاسيكية بتصميم أنيق، تكمل الإطلالة بسهولة.",
         sizes: ["قياس موحد", "Mini", "Classic", "Evening"],
         gallery: ["image/w1.png", "image/w3.png", "image/w4.png", "image/w2.png"]
@@ -72,6 +77,7 @@ const products = [{
         compareAt: 2600,
         image: "image/m4.png",
         badge: "مختار",
+        color: "noir",
         description: "ساعة ميلونتي الكلاسيكية بتصميم أنيق، تكمل الإطلالة بسهولة.",
         sizes: ["قياس موحد", "Mini", "Classic", "Evening"],
         gallery: ["image/m4.png", "image/m3.png", "image/m2.png", "image/m1.png"]
@@ -85,6 +91,7 @@ const products = [{
         compareAt: 6200,
         image: "image/18.png",
         badge: "أتيليه",
+        color: "gold",
         description: "كعب فاخر بخطوط متوازنة ولمعة ذهبية خفيفة، مصمم ليكمل القطع السوداء والمطرزة.",
         sizes: ["36", "37", "38", "39"],
         gallery: ["image/women-heels.png", "image/hero-women-clean.png", "image/women-bag.png", "image/product-gallery.png"]
@@ -98,6 +105,7 @@ const products = [{
         compareAt: 5300,
         image: "image/8.png",
         badge: "جديد",
+        color: "noir",
         description: "بدلة رسمية بتفصيل حاد وقماش داكن مريح، تناسب الاجتماعات والمناسبات الخاصة.",
         sizes: ["S", "M", "L", "XL"],
         gallery: ["image/8.png", "image/q2.png", "image/q3.png", "image/q1.png"]
@@ -111,6 +119,7 @@ const products = [{
         compareAt: 13400,
         image: "image/10.png",
         badge: "محدود",
+        color: "noir",
         description: "ساعة سوداء بلمسات ذهبية دقيقة، قطعة تكمل الإطلالة من غير صخب.",
         sizes: ["قياس موحد", "42mm", "Classic", "Limited"],
         gallery: ["image/10.png", "image/s1.png", "image/s2.png", "image/men-suit.png"]
@@ -124,6 +133,7 @@ const products = [{
         compareAt: 3300,
         image: "image/12.png",
         badge: "حرفة",
+        color: "noir",
         description: "حذاء جلدي كلاسيكي بتشطيب يدوي، مريح في الحركة ويحافظ على طابع رسمي هادئ.",
         sizes: ["40", "41", "42", "43"],
         gallery: ["image/men-shoes.png", "image/hero-men-clean.png", "image/men-watch.png", "image/men-suit.png"]
@@ -137,6 +147,7 @@ const products = [{
         compareAt: 3200,
         image: "image/31.png",
         badge: "ناعم",
+        color: "wine",
         description: "فستان أطفال بقصة مريحة وتفاصيل مناسبة للمناسبات، يوازن بين الرقي وسهولة الحركة.",
         sizes: ["4Y", "6Y", "8Y", "10Y"],
         gallery: ["image/child-gown.png", "image/children-hero.png", "image/child-royal.png", "image/product-gallery.png"]
@@ -150,6 +161,7 @@ const products = [{
         compareAt: 2400,
         image: "image/2.png",
         badge: "رسمي",
+        color: "noir",
         description: "طقم أطفال رسمي بخطوط بسيطة وأقمشة مريحة ليبقى الطفل أنيقًا طوال اليوم.",
         sizes: ["4Y", "6Y", "8Y", "10Y"],
         gallery: ["image/2.png", "image/b3.png", "image/b4.png", "image/b2.png"]
@@ -163,6 +175,7 @@ const products = [{
         compareAt: 2850,
         image: "image/7.png",
         badge: "مميز",
+        color: "wine",
         description: "فستان أطفال مخملي بتفاصيل احتفالية ناعمة، مناسب للصور واللحظات العائلية الخاصة.",
         sizes: ["4Y", "6Y", "8Y", "10Y"],
         gallery: ["image/child-royal.png", "image/children-hero.png", "image/child-gown.png", "image/product-gallery.png"]
@@ -235,9 +248,31 @@ const state = {
     category: "all",
     query: "",
     sort: "featured",
+    colorFilter: "all",
     productQuantity: 1,
     productSize: "FR 38"
 };
+
+function applyColorFilter(color) {
+    state.colorFilter = color;
+    document.querySelectorAll("[data-color]").forEach((button) => {
+        button.classList.toggle("active", button.dataset.color === color);
+    });
+    renderCatalogs();
+}
+
+function setupColorPicker() {
+    const buttons = document.querySelectorAll("[data-color]");
+
+    buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const selectedColor = button.dataset.color;
+            applyColorFilter(state.colorFilter === selectedColor ? "all" : selectedColor);
+        });
+    });
+
+    applyColorFilter(state.colorFilter || "all");
+}
 
 function injectIcons() {
     if (!document.getElementById("atelier-icons")) {
@@ -385,6 +420,10 @@ function getCatalogProducts(root) {
     if (state.query) {
         const query = state.query.toLowerCase();
         list = list.filter((product) => `${product.name} ${product.label} ${categoryNames[product.category]}`.toLowerCase().includes(query));
+    }
+
+    if (state.colorFilter && state.colorFilter !== "all") {
+        list = list.filter((product) => product.color === state.colorFilter);
     }
 
     if (state.sort === "price-low") {
@@ -854,6 +893,34 @@ function setupForms() {
         });
     });
 
+    document.querySelectorAll("[data-contact-form]").forEach((form) => {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const data = Object.fromEntries(new FormData(form).entries());
+            const existing = readStorage("atelier:contact-requests", []);
+            const requests = Array.isArray(existing) ? existing : [];
+
+            requests.push({
+                name: data.name || "غير محدد",
+                email: data.email || "غير محدد",
+                phone: data.phone || "غير محدد",
+                message: data.message || "",
+                submittedAt: new Date().toISOString()
+            });
+
+            writeStorage("atelier:contact-requests", requests);
+            form.reset();
+
+            const result = form.querySelector("[data-contact-result]");
+            if (result) {
+                result.textContent = "شكراً لك، تم إرسال رسالتك وسنعود إليك قريباً.";
+            }
+
+            showToast("تم إرسال الرسالة بنجاح.");
+        });
+    });
+
     document.querySelectorAll("[data-auth-form]").forEach((form) => {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
@@ -906,6 +973,7 @@ function observeReveals() {
 function init() {
     injectIcons();
     setupNavigation();
+    setupColorPicker();
     setupCatalogEvents();
     setupProductPage();
     setupCheckout();

@@ -296,6 +296,19 @@ function updateCartCount() {
     });
 }
 
+function updateFavoritesCount() {
+    const count = state.favorites.size;
+    document.querySelectorAll('a.icon-button[href="favorites.html"][aria-label="المفضلة"]').forEach((anchor) => {
+        let element = anchor.querySelector("[data-favorites-count]");
+        if (!element) {
+            element = document.createElement("span");
+            element.dataset.favoritesCount = "";
+            anchor.appendChild(element);
+        }
+        element.textContent = count;
+    });
+}
+
 function addToCart(productId, quantity = 1, size = "قياس موحد") {
     const product = byId(productId);
     if (!product) return;
@@ -341,9 +354,16 @@ function toggleFavorite(productId) {
     }
 
     writeStorage("atelier:favorites", [...state.favorites]);
+    updateFavoritesCount();
     renderCatalogs();
-    document.querySelectorAll(`[data-favorite="${productId}"]`).forEach((button) => {
+    renderFavoritesPage();
+    document.querySelectorAll(`[data-toggle-favorite="${productId}"], [data-favorite="${productId}"]`).forEach((button) => {
         button.classList.toggle("is-active", state.favorites.has(productId));
+        const icon = button.querySelector("i.fa-heart");
+        if (icon) {
+            icon.classList.toggle("fa-solid", state.favorites.has(productId));
+            icon.classList.toggle("fa-regular", !state.favorites.has(productId));
+        }
     });
 }
 
@@ -380,7 +400,9 @@ function getCatalogProducts(root) {
 
 function productCard(product) {
     const quantity = state.quantities[product.id] || 1;
-    const favoriteClass = state.favorites.has(product.id) ? "is-active" : "";
+    const isActive = state.favorites.has(product.id);
+    const favoriteClass = isActive ? "is-active" : "";
+    const heartStyle = isActive ? "fa-solid" : "fa-regular";
     const productUrl = `product.html?id=${product.id}`;
 
     return `
@@ -390,7 +412,7 @@ function productCard(product) {
         <span class="badge">${product.badge}</span>
       </a>
       <button class="icon-button favorite-card ${favoriteClass}" type="button" data-toggle-favorite="${product.id}" aria-label="إضافة ${product.name} للمفضلة">
-        <svg><use href="#icon-heart"></use></svg>
+        <i class="${heartStyle} fa-heart"></i>
       </button>
       <div class="product-body">
         <small>${product.label} · ${categoryNames[product.category]}</small>
@@ -548,6 +570,20 @@ function renderCatalogs() {
             list.map(productCard).join("") :
             `<p class="empty-state">لا توجد قطع مطابقة حاليا.</p>`;
     });
+}
+
+function getFavoriteProducts() {
+    return [...state.favorites].map(byId).filter(Boolean);
+}
+
+function renderFavoritesPage() {
+    const root = document.querySelector("[data-favorites-grid]");
+    if (!root) return;
+
+    const list = getFavoriteProducts();
+    root.innerHTML = list.length ?
+        list.map(productCard).join("") :
+        `<p class="empty-state">لا توجد قطع في المفضلة حالياً. اضغط على القلب لتُضيف القطع.</p>`;
 }
 
 function setupCatalogEvents() {
@@ -852,9 +888,11 @@ function init() {
     setupForms();
     setupFooter();
     renderCatalogs();
+    renderFavoritesPage();
     renderHomePage();
     renderCheckout();
     updateCartCount();
+    updateFavoritesCount();
     observeReveals();
 }
 

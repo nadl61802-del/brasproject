@@ -8,14 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header class="site-header" data-header>
         <a class="brand" href="index.html"><img src="image/لوجو.png" alt="logo" width="70" height="70"></a>
-        <nav class="desktop-nav"><a href="collections.html">المجموعات</a><a href="women.html">النساء</a><a href="men.html">الرجال</a><a href="children.html">الأطفال</a><a href="login.html">الأتيليه</a></nav>
+        <nav class="desktop-nav"><a href="collections.html">المجموعات</a><a href="women.html">النساء</a><a
+                href="men.html">الرجال</a><a href="children.html">الأطفال</a><a href="login.html">الأتيليه</a></nav>
         <div class="header-actions"><a class="icon-button" href="#shop" aria-label="البحث"><svg>
                     <use href="image/icons.svg#icon-search"></use>
                 </svg></a><a class="icon-button" href="login.html" aria-label="الحساب"><svg>
@@ -31,10 +34,12 @@
         </div>
     </header>
     <aside class="mobile-menu" data-mobile-menu>
-        <div class="drawer-head"><span class="mini-label">القائمة</span><button class="icon-button" type="button" data-menu-close><svg>
+        <div class="drawer-head"><span class="mini-label">القائمة</span><button class="icon-button" type="button"
+                data-menu-close><svg>
                     <use href="image/icons.svg#icon-close"></use>
                 </svg></button></div><a href="index.html">الرئيسية</a><a href="collections.html">المجموعات</a>
-        <a href="women.html">النساء</a><a href="children.html">الأطفال</a><a href="favorites.html">المفضلة</a><a href="checkout.html">الدفع</a>
+        <a href="women.html">النساء</a><a href="children.html">الأطفال</a><a href="favorites.html">المفضلة</a><a
+            href="checkout.html">الدفع</a>
     </aside>
 
     <main>
@@ -61,19 +66,29 @@
                             </svg>
                             <input type="search" data-search-input placeholder="ابحث عن قطعة">
                         </label>
-                        <select data-sort-select>
-                            <option value="featured">الأبرز</option>
-                            <option value="price-low">السعر الأقل</option>
-                            <option value="price-high">السعر الأعلى</option>
-                        </select>
+                        <div class="custom-sort" data-sort-dropdown>
+                            <button class="custom-sort-btn" type="button" data-sort-btn>
+                                <span data-sort-label>الأبرز</span>
+                                <i class="fa-solid fa-angle-down sort-arrow"></i>
+                            </button>
+                            <div class="custom-sort-menu">
+                                <button type="button" data-sort-option value="featured">الأبرز</button>
+                                <button type="button" data-sort-option value="price-low">السعر الأقل</button>
+                                <button type="button" data-sort-option value="price-high">السعر الأعلى</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="category-tabs reveal"><button class="active" type="button" data-filter="all">الكل</button><button type="button" data-filter="men">الرجال</button><button type="button" data-filter="accessories">إكسسوارات</button></div>
+                <div class="category-tabs reveal"><button class="active" type="button"
+                        data-filter="all">الكل</button><button type="button" data-filter="men">الرجال</button><button
+                        type="button" data-filter="accessories">إكسسوارات</button></div>
                 <div class="shop-layout">
                     <aside class="filter-panel reveal">
                         <div>
                             <h3>المقاسات</h3>
-                            <div class="chip-row"><button type="button">S</button><button type="button">M</button><button type="button">L</button><button type="button">XL</button></div>
+                            <div class="chip-row"><button type="button">S</button><button
+                                    type="button">M</button><button type="button">L</button><button
+                                    type="button">XL</button></div>
                         </div>
                         <div>
                             <h3>النتائج</h3>
@@ -143,7 +158,8 @@
                 <a href="checkout.html">سياسة الخصوصية</a>
                 <a href="login.html">الاستخدام</a>
             </div>
-            <p class="footer-copyright">© <span data-current-year></span> Atelier الأخوة. التصميم والمحتوى حصري محفوظة بالكامل.
+            <p class="footer-copyright">© <span data-current-year></span> Atelier الأخوة. التصميم والمحتوى حصري محفوظة
+                بالكامل.
             </p>
         </div>
     </footer>

@@ -58,11 +58,17 @@
                                 <use href="image/icons.svg#icon-search"></use>
                             </svg>
                             <input type="search" data-search-input placeholder="ابحثي عن قطعة"></label>
-                        <select data-sort-select>
-                            <option value="featured">الأبرز</option>
-                            <option value="price-low">السعر الأقل</option>
-                            <option value="price-high">السعر الأعلى</option>
-                        </select>
+                        <div class="custom-sort" data-sort-dropdown>
+                            <button class="custom-sort-btn" type="button" data-sort-btn>
+                                <span data-sort-label>الأبرز</span>
+                                <i class="fa-solid fa-angle-down sort-arrow"></i>
+                            </button>
+                            <div class="custom-sort-menu">
+                                <button type="button" data-sort-option value="featured">الأبرز</button>
+                                <button type="button" data-sort-option value="price-low">السعر الأقل</button>
+                                <button type="button" data-sort-option value="price-high">السعر الأعلى</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="category-tabs reveal"><button class="active" type="button" data-filter="all">الكل</button><button type="button" data-filter="women">فساتين</button><button type="button" data-filter="accessories2">إكسسوارات</button></div>

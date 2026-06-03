@@ -630,12 +630,36 @@ function setupCatalogEvents() {
         });
     });
 
-    document.querySelectorAll("[data-sort-select]").forEach((select) => {
-        select.addEventListener("change", (event) => {
-            state.sort = event.target.value;
-            renderCatalogs();
-        });
+    document.querySelectorAll("[data-sort-dropdown]").forEach((dropdown) => {
+  const btn = dropdown.querySelector("[data-sort-btn]");
+  const label = dropdown.querySelector("[data-sort-label]");
+  const options = dropdown.querySelectorAll("[data-sort-option]");
+
+  btn.addEventListener("click", () => {
+    dropdown.classList.toggle("open");
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      state.sort = option.value;
+      label.textContent = option.textContent.trim();
+
+      options.forEach((item) => item.classList.remove("active"));
+      option.classList.add("active");
+
+      dropdown.classList.remove("open");
+      renderCatalogs();
     });
+  });
+});
+
+document.addEventListener("click", (event) => {
+  document.querySelectorAll("[data-sort-dropdown]").forEach((dropdown) => {
+    if (!dropdown.contains(event.target)) {
+      dropdown.classList.remove("open");
+    }
+  });
+});
 }
 
 function setupProductPage() {
